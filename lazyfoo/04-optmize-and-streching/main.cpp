@@ -91,7 +91,6 @@ int main(int argc, char* argv[])
     // SDL_BlitScalled(src, srcrect | NULL, target, rect)
     // with `srcrect` we can crop the src image
     SDL_BlitScaled(g_streched_surface, NULL, g_screen_surface, &strechRect); 
-    sdlc(SDL_BlitSurface(g_streched_surface, NULL, g_screen_surface, NULL));
 
     SDL_UpdateWindowSurface(g_window);
 
