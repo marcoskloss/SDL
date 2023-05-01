@@ -67,6 +67,15 @@ int main()
         if (direction == SDL_SCANCODE_LEFT)
             head.x -= 1;
 
+        if (head.y < 0)
+            head.y = SCREEN_SIZE - CELL_SIZE; 
+        if (head.y > SCREEN_SIZE - CELL_SIZE)
+            head.y = 0;
+        if (head.x < 0)
+            head.x = SCREEN_SIZE - CELL_SIZE;
+        if (head.x > SCREEN_SIZE - CELL_SIZE)
+            head.x = 0;
+
         SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
         SDL_RenderClear(renderer);
 
